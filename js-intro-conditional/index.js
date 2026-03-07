@@ -116,5 +116,4 @@ switch (traffic_light_red) {
     break;
   default:
     console.log("Wrong Value");
-    
 }
