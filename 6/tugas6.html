@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Card Page</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(180deg, #f5f3ff, #ffffff);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      /* Container */
+
+      .container {
+        max-width: 1100px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Header */
+
+      .title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+
+      /* Toggle Button */
+
+      .toggle {
+        display: inline-flex;
+        background: #eee;
+        border-radius: 30px;
+        padding: 4px;
+        margin-bottom: 40px;
+      }
+
+      .toggle button {
+        border: none;
+        padding: 10px 25px;
+        cursor: pointer;
+        border-radius: 25px;
+        font-weight: 600;
+        background: transparent;
+      }
+
+      .toggle .active {
+        background: linear-gradient(90deg, #6a5cff, #8f6cff);
+        color: white;
+      }
+
+      /* Cards */
+
+      .cards {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background: white;
+        padding: 30px;
+        width: 300px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        text-align: left;
+        transition: 0.3s;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+      }
+
+      /* Badge */
+
+      .badge {
+        display: inline-block;
+        background: #6a5cff;
+        text-align: center;
+        width: 80px;
+        padding: 10px;
+        color: white;
+        font-size: 12px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        font-family: sans-serif;
+      }
+
+      /* Price */
+
+      .price {
+        font-size: 34px;
+        font-weight: 700;
+        margin: 15px 0;
+      }
+
+      .price span {
+        font-size: 14px;
+        color: #777;
+      }
+
+      /* Features */
+
+      .features {
+        list-style: none;
+        margin: 20px 0;
+        flex-grow: 1;
+      }
+
+      .features li {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #444;
+      }
+
+      .features li::before {
+        content: "✔ ";
+        color: #6a5cff;
+        font-weight: bold;
+      }
+
+      /* Buttons */
+
+      .btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        background: #f2f2f2;
+      }
+
+      .btn-dark {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        background: #2d2d3a;
+        color: white;
+      }
+
+      /* Custom Card */
+
+      .custom {
+        background: #f3efff;
+      }
+
+      .custom h2 {
+        font-size: 26px;
+        margin: 15px 0;
+      }
+
+      /* Responsive */
+
+      @media (max-width: 900px) {
+        .cards {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .card {
+          width: 100%;
+          max-width: 360px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">Choose your right plan!</h1>
+
+      <p class="subtitle">
+        Select from best plans, ensuring a perfect match. Need more or less?<br />
+        Customize your subscription for a seamless fit!
+      </p>
+
+      <div class="toggle">
+        <button class="active">Monthly</button>
+        <button>Quarterly (save 10%)</button>
+      </div>
+
+      <div class="cards">
+        <!-- CARD 1 -->
+
+        <div class="card">
+          <span class="badge">Pro</span>
+
+          <p>
+            Ideal for those who already got their website up and running and are
+            seeking assistance to maintain it.
+          </p>
+
+          <div class="price">$2500 <span>/month</span></div>
+
+          <ul class="features">
+            <li>3–5 day turnaround</li>
+            <li>Native Development</li>
+            <li>Task delivered one-by-one</li>
+            <li>Dedicated dashboard</li>
+            <li>Updates via Dashboard & Slack</li>
+          </ul>
+
+          <button class="btn">Get Started</button>
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="card">
+          <span class="badge">Pro Plus</span>
+
+          <p>
+            Perfect if you want to build or scale your website faster with
+            strategy calls included.
+          </p>
+
+          <div class="price">$3800 <span>/month</span></div>
+
+          <ul class="features">
+            <li>1–3 day turnaround</li>
+            <li>Monthly strategy call</li>
+            <li>Commercial license</li>
+            <li>Native Development</li>
+            <li>Dedicated dashboard</li>
+            <li>Updates via Dashboard & Slack</li>
+          </ul>
+
+          <button class="btn">Get Started</button>
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card custom">
+          <span class="badge">Custom</span>
+
+          <p>
+            If these plans don’t fit, let's create one that suits you perfectly.
+          </p>
+
+          <h2>Let’s Talk!</h2>
+
+          <ul class="features">
+            <li>Everything in design & development</li>
+            <li>Strategy workshop</li>
+            <li>Priority support</li>
+            <li>Multiple tasks at once</li>
+            <li>Advanced custom development</li>
+          </ul>
+
+          <button class="btn-dark">Book a Call</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
